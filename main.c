@@ -6,8 +6,10 @@
 int main(int argc, char *argv[])
 {
     int error = ERR_NONE;
-    int vertices;
+
     xarxa_t x;
+    x.n = 0;
+
     x.matriz = NULL;
     FILE *archivo = NULL;
     if (argc != 2)
@@ -27,7 +29,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-            error = leer_archivo(archivo, &vertices, &x);
+            error = leer_archivo(archivo, &x.n, &x);
         }
         // Cerrar archivo y liberar espacio
         if (archivo != NULL)
@@ -37,7 +39,7 @@ int main(int argc, char *argv[])
         }
         if (x.matriz != NULL) // Librerar espacio
         {
-            for (int i = 0; i < vertices; i++)
+            for (int i = 0; i < x.n; i++)
             {
                 free(x.matriz[i]);
             }

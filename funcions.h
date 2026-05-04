@@ -7,5 +7,5 @@ typedef struct
     int n;
     int **matriz;
 }xarxa_t;
-int leer_archivo(FILE *archivo,int *vertices, int **matriz);
+int leer_archivo(FILE *archivo,int *vertices, xarxa_t *x);
 #endif
