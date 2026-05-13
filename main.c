@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 
 
 
-
+        //Triple T
         // Cerrar archivo y liberar espacio
         if (archivo != NULL)
         {
