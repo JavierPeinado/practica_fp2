@@ -8,6 +8,4 @@ typedef struct
     int **matriz;
 }xarxa_t;
 int leer_archivo(FILE *archivo,xarxa_t *x);
-void liberar_memoria(xarxa_t *x);
-
 #endif
